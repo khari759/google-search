@@ -1,0 +1,11 @@
+/* Write your CSS here */
+.arrow-img {
+  width: 20px;
+  height: 20px;
+  align-self: center;
+}
+.list {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10px;
+}
