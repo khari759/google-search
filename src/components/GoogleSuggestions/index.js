@@ -6,20 +6,20 @@ import './index.css'
 import Items from '../SuggestionItem'
 
 class GoogleSuggestions extends Component {
-  state = {searchInput: '', value: ''}
+  state = {searchInput: ''}
 
   onChangeList = event => {
     this.setState({searchInput: event.target.value})
   }
 
   getValue = suggestion => {
-    this.setState({value: suggestion})
+    this.setState({searchInput: suggestion})
   }
 
   render() {
     const {suggestionsList} = this.props
 
-    const {searchInput, value} = this.state
+    const {searchInput} = this.state
 
     console.log(searchInput)
     console.log(suggestionsList)
@@ -47,7 +47,7 @@ class GoogleSuggestions extends Component {
                 placeholder="Search Google"
                 className="input"
                 onChange={this.onChangeList}
-                value={value}
+                value={searchInput}
               />
             </div>
             <div>
